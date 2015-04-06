@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Dashboard - E Monev KLB Keracunan Pangan</title>
+    <title>Dashboard - Manajemen Aset</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
   <div class="navbar-inner">
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
                     class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="#"><img src="<?php echo base_url();?>assets/logo.png" style="width:30px;float:left;margin-top:-8px;margin-bottom:-13px">
-					<span style="margin-left:10px;line-height:-15px">E-Monev KLB Keracunan Pangan</span></a>
+					<span style="margin-left:10px;line-height:-15px">Sistem Informasi Manajemen Aset</span></a>
       <div class="nav-collapse">
         <ul class="nav pull-right">
           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i

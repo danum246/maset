@@ -1,78 +1,19 @@
-<?php
-function total($kd_keluhan,$flag){
-	if($flag=='all'){
-		$sql = mysql_query("select count(*) as total from tbl_keluhan_pasien where kd_keluhan='$kd_keluhan'");
-	}else{
-		$sql = mysql_query("select count(*) as total from tbl_keluhan_pasien where kd_keluhan='$kd_keluhan' and status_pasien='$flag'");
-	}
-	//$file = $this->db->query('select file from tbl_resume_keluhan where kd_keluhan = '$kd_keluhan' );
-	$row = mysql_fetch_array($sql);
-	return $row['total'];
-}
-?> 
+
 <div class="row">
-        <!--div class="span6">
+        <div class="span6">
           <div class="widget widget-nopad">
             <div class="widget-header"> <i class="icon-list-alt"></i>
-              <h3>Tanggal Kejadian KLB Keracunan Pangan</h3>
+              <h3>Calendar</h3>
             </div>
-            <!-- /widget-header >
+            <!-- /widget-header -->
             <div class="widget-content">
               <div id='calendar'>
               </div>
             </div>
-            <!-- /widget-content > 
-          </div>
-        </div-->
-        <!-- /span6 -->
-        <div class="span12">
-           <div class="widget widget-nopad">
-            <div class="widget-header"> <i class="icon-list-alt"></i>
-              <h3> Resume Laporan KLB Keracunan Pangan</h3>
-            </div>
-            <!-- /widget-header -->
-            <div class="widget-content" style="padding:30px">
-								<table id="example1" class="table table-bordered table-striped">
-				                	<thead>
-				                        <tr> 
-				                        	<th>No</th>
-				                        	<th>Kabupaten</th>
-                                  <th>Kecamatan</th>
-                                  <th>Kelurahan</th>
-				                        	<th>Nama Kejadian</th>
-				                        	<th>Tanggal</th>
-                                  <th>Jumlah Korban</th>
-                                  <th>Sehat</th>
-                                  <th>Sakit</th>
-                                  <th>Meninggal</th>
-                                  <th>Hasil Analisa</th>
-				                        </tr>
-				                    </thead>
-				                    <tbody>
-										<?php $no = 1; foreach($keluhan as $row){?>
-				                        <tr>
-				                        	<td><?php echo $no;?></td>
-				                        	<!--td><a href="<?php echo base_url();?>form/form01/result/<?php echo $row->kd_keluhan;?>"><?php echo $row->kd_keluhan;?></a></td-->
-                                  <td><?php echo $row->kabupaten_kota;?></td>
-                                  <td><?php echo $row->kecamatan;?></td>
-                                  <td><?php echo $row->kelurahan;?></td>
-				                        	<td><?php echo $row->nama_kejadian;?></td>
-											
-				                        	<td><?php echo $row->waktu_lapor;?></td>
-				                  <td><?php echo total($row->kd_keluhan,'all');?></td>
-				                  <td><?php echo total($row->kd_keluhan,'0');?></td>
-				                  <td><?php echo total($row->kd_keluhan,'1');?></td>
-                                  <td><?php echo total($row->kd_keluhan,'2');?></td>
-                                  <td><a href="<?php echo base_url();?>form/form01/result/<?php echo $row->kd_keluhan;?>">Lihat</a></td>
-				                        </tr>
-										<?php $no++; } ?>
-				                    </tbody>
-				               	</table>
-					
-            </div>
-            <!-- /widget-content --> 
+            <!--/widget-content --> 
           </div>
         </div>
+        <!--/span6 -->
       </div>
 
 <script language="javascript" type="text/javascript" src="<?php echo base_url();?>assets/js/full-calendar/fullcalendar.min.js"></script>

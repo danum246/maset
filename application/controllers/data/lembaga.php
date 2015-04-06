@@ -55,25 +55,10 @@ class lembaga extends CI_Controller {
 	}
 	
 	function save_lembaga(){
-		if($this->input->post('level')==1){
 		$data = array(
 		'kode_lembaga'	=> $this->input->post('kode'),
 		'lembaga'		=> $this->input->post('lembaga'),
-		'level'			=> $this->input->post('level'),
-		'kelurahan_id'	=> $this->input->post('kelurahan'),
-		'kabupaten_id'	=> $this->input->post('kabupaten'),
-		'pusat'			=> 1
 		);
-		}else{
-		$data = array(
-		'kode_lembaga'	=> $this->input->post('kode'),
-		'lembaga'		=> $this->input->post('lembaga'),
-		'level'			=> $this->input->post('level'),
-		'kelurahan_id'	=> $this->input->post('kelurahan'),
-		'kabupaten_id'	=> $this->input->post('kabupaten'),
-		'pusat'			=> 0
-		);
-		}
 		$this->db->insert('tbl_lembaga',$data);
 		echo "<script>alert('Berhasil');
 		document.location.href='".base_url()."data/lembaga';</script>";
@@ -81,31 +66,14 @@ class lembaga extends CI_Controller {
 	
 	function view_edit($id){
 		$data['query'] = $this->db->query("select * from tbl_lembaga where id_lembaga = '$id'")->row();
-		$data['kelurahan'] = $this->app_model->get_kelurahan();
-		$data['kabupaten'] = $this->app_model->get_kabupaten();
 		$this->load->view('data/edit_lembaga_view',$data);
 	}
 	
 	function edit_lembaga(){
-		if($this->input->post('level_edit')==1){
 		$data = array(
 		'kode_lembaga'	=> $this->input->post('kode_edit'),
 		'lembaga'		=> $this->input->post('lembaga_edit'),
-		'level'			=> $this->input->post('level_edit'),
-		'kelurahan_id'	=> $this->input->post('kelurahan_edit'),
-		'kabupaten_id'	=> $this->input->post('kabupaten_edit'),
-		'pusat'			=> 1
 		);
-		}else{
-		$data = array(
-		'kode_lembaga'	=> $this->input->post('kode_edit'),
-		'lembaga'		=> $this->input->post('lembaga_edit'),
-		'level'			=> $this->input->post('level_edit'),
-		'kelurahan_id'	=> $this->input->post('kelurahan_edit'),
-		'kabupaten_id'	=> $this->input->post('kabupaten_edit'),
-		'pusat'			=> 0
-		);
-		}
 		$this->db->where('id_lembaga',$this->input->post('id_lembaga'));
 		$this->db->update('tbl_lembaga',$data);
 		echo "<script>alert('Berhasil');

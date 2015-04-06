@@ -3,7 +3,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>E-Monev KLB Keracunan Pangan</title>
+    <title>Sistem Informasi Manajemen Aset</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
@@ -27,7 +27,7 @@
 		
 			<div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
 	                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="#"><img src="<?php echo base_url();?>assets/logo.png" style="width:30px;float:left;margin-top:-8px;margin-bottom:-13px">
-						<span style="margin-left:10px;line-height:-15px">E-Monev KLB Keracunan Pangan</span></a>
+						<span style="margin-left:10px;line-height:-15px">Sistem Informasi Manajemen Aset</span></a>
 	    	</div> <!-- /container -->
 		
 		</div> <!-- /navbar-inner -->
@@ -81,13 +81,6 @@
 <br>
 <br>
 <br>
-<center style="color:black;font-weight:bold;font-family:arial;font-size:12pt">
-SUB DIREKTORAT HIGIENE SANITASI PANGAN<BR>
-DIREKTORAT PENYEHATAN LINGKUNGAN<BR>
-	DIREKTORAT JENDERAL PENGENDALIAN PENYAKIT DAN PENYEHATAN LINGKUNGAN<BR>
-	KEMENTRIAN KESEHATAN RI<br>
-	TAHUN <?php echo date('Y');?>
-	</center>
 <script src="<?php echo base_url();?>assets/js/jquery-1.7.2.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
 
